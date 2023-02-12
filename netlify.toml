@@ -1,3 +1,8 @@
 [build]
   command = "# no build command"
   functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild" 
+  external_node_modules = ["mongodb","openai","cloudinary","express","serverless-http","dotenv","cors"]
+  included_files = ["routes/*.js","mongodb/**/*.js"]
