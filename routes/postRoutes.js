@@ -4,7 +4,7 @@
 // import Post from "../mongodb/models/post.js";
 const dotenv = require("dotenv");
 const express = require("express");
-const cloudinary = require("cloudinary").v2;
+const { v2: cloudinary } = require("cloudinary");
 const Post = require("../mongodb/models/post.js");
 
 dotenv.config();

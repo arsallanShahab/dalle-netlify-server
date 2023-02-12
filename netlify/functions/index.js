@@ -2,8 +2,6 @@
 const express = require("express");
 const cors = require("cors");
 const serverless = require("serverless-http");
-const { v2: cloudinary } = require("cloudinary");
-const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const postRoutes = require("../../routes/postRoutes.js");
 const connectDB = require("../../mongodb/connect.js");
@@ -21,8 +19,8 @@ dotenv.config();
 dotenv.config();
 
 const app = express();
-app.use(bodyParser.json());
 app.use(cors());
+app.use(express.json({ limit: "50mb" }));
 app.use("/.netlify/functions/index/api/v1/dalle", dalleRoutes);
 app.use("/.netlify/functions/index/api/v1/post", postRoutes);
 // app.use("/.netlify/functions/index", route); // path must route to lambda
