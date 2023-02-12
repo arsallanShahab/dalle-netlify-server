@@ -1,6 +1,7 @@
 "use strict";
 // const express = require("express");
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
 import serverless from "serverless-http";
 import connectDB from "../../mongodb/connect.js";
