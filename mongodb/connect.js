@@ -12,4 +12,4 @@ const connectDB = async (url) => {
     });
 };
 
-export default connectDB;
+module.exports = connectDB;

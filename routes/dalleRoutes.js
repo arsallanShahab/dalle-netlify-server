@@ -1,6 +1,9 @@
-import * as dotenv from "dotenv";
-import express from "express";
-import { Configuration, OpenAIApi } from "openai";
+// import * as dotenv from "dotenv";
+// import express from "express";
+const dotenv = require("dotenv");
+const express = require("express");
+const { Configuration, OpenAIApi } = require("openai");
+// import { Configuration, OpenAIApi } from "openai";
 
 dotenv.config();
 
@@ -13,7 +16,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 router.route("/").get((req, res) => {
-  res.send("Hello From open ai");
+  res.send("Hello From open v1/dalle ai");
 });
 
 router.route("/").post(async (req, res) => {
@@ -35,4 +38,4 @@ router.route("/").post(async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
