@@ -4,7 +4,6 @@ const cors = require("cors");
 const serverless = require("serverless-http");
 const { v2: cloudinary } = require("cloudinary");
 const bodyParser = require("body-parser");
-const route = require("../../routes/route.js");
 const dotenv = require("dotenv");
 const postRoutes = require("../../routes/postRoutes.js");
 const connectDB = require("../../mongodb/connect.js");
